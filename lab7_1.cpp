@@ -11,6 +11,7 @@ string func1(string x){
 		i++;
 	}
 	return y;
+	//กลับด้านตัวอักษร
 }
 
 string func2(string x){
@@ -34,8 +35,20 @@ string func3(string x){
 }
 
 int main(){
-    cout >> "Input text: "
-    cout >> "Reversed text: "
-    cout >> "Palindrome: "
+	string text;
+    cout << "Input text: ";
+	cin >> text;
+	string x = func1(text);
+	string y = func2(x);
+	string z = func2(text);
+    cout << "Reversed text: "<<x<<"\n";
+    cout << "Palindrome: ";
+	if (y == z)
+	{
+		cout << "Yes";
+	}else{
+		cout << "No";
+	}
+	
     return 0;
 }
